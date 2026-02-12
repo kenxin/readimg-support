@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 读图</title>
+    <title>Privacy Policy - ReadImg</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
         .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); padding: 40px; }
         .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #f0f0f0; }
-        .app-icon { width: 80px; height: 80px; border-radius: 18px; background: linear-gradient(135deg, #4285f4 0%, #8a2be2 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
-        .app-icon svg { width: 50px; height: 50px; fill: white; }
+        .lang-switch { position: absolute; top: 20px; right: 20px; }
+        .lang-switch a { color: white; text-decoration: none; padding: 8px 16px; background: rgba(255,255,255,0.2); border-radius: 20px; }
+        .lang-switch a:hover { background: rgba(255,255,255,0.3); }
         h1 { font-size: 28px; color: #1a1a1a; margin-bottom: 10px; }
         .update-date { color: #888; font-size: 14px; }
         h2 { font-size: 20px; color: #4285f4; margin: 30px 0 15px; padding-left: 15px; border-left: 4px solid #4285f4; }
@@ -22,66 +23,145 @@
         .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #f0f0f0; text-align: center; color: #888; font-size: 14px; }
         .contact-email { color: #4285f4; text-decoration: none; }
         .contact-email:hover { text-decoration: underline; }
+        .content-zh, .content-en { display: none; }
         @media (max-width: 600px) { .container { padding: 25px; } h1 { font-size: 24px; } h2 { font-size: 18px; } }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <a href="#zh" onclick="switchLang('zh')">中文</a> |
+        <a href="#en" onclick="switchLang('en')">English</a>
+    </div>
+
     <div class="container">
         <div class="header">
-            <h1>读图 - 隐私政策</h1>
-            <p class="update-date">最后更新日期：2026年2月</p>
+            <h1 class="content-zh">读图 - 隐私政策</h1>
+            <h1 class="content-en">ReadImg - Privacy Policy</h1>
+            <p class="update-date content-zh">最后更新日期：2026年2月</p>
+            <p class="update-date content-en">Last Updated: February 2026</p>
         </div>
 
-        <div class="highlight">
-            <p><strong>核心承诺：</strong>读图应用完全在您的设备本地运行，不收集、不上传、不存储您的任何个人数据。您的隐私安全是我们的首要考虑。</p>
+        <!-- Chinese Content -->
+        <div class="content-zh">
+            <div class="highlight">
+                <p><strong>核心承诺：</strong>读图应用完全在您的设备本地运行，不收集、不上传、不存储您的任何个人数据。您的隐私安全是我们的首要考虑。</p>
+            </div>
+
+            <h2>1. 信息收集</h2>
+            <p>读图应用<strong>不收集任何个人信息</strong>。具体而言：</p>
+            <ul>
+                <li><strong>图片数据：</strong>您选择或拍摄的图片仅在设备本地进行处理，不会上传到任何服务器</li>
+                <li><strong>识别结果：</strong>文字识别完全由设备本地的 Apple Vision 框架完成，识别结果不会发送到外部</li>
+                <li><strong>使用数据：</strong>我们不追踪或记录您的使用行为</li>
+                <li><strong>设备信息：</strong>我们不收集设备标识符或其他设备信息</li>
+            </ul>
+
+            <h2>2. 权限使用说明</h2>
+            <p>为了提供核心功能，应用需要以下权限：</p>
+            <ul>
+                <li><strong>相机权限：</strong>用于拍摄图片进行文字识别。拍摄的照片仅用于识别，不会被保存或上传</li>
+                <li><strong>照片库权限：</strong>用于从相册选择图片进行文字识别。我们只读取您选择的图片，不会访问其他照片</li>
+            </ul>
+            <p>您可以随时在系统设置中撤销这些权限。</p>
+
+            <h2>3. 数据存储</h2>
+            <p>读图应用不在设备上存储您的图片或识别结果。每次使用完成后，所有临时数据都会被清除。应用可能保存的仅有：</p>
+            <ul>
+                <li>您的语音设置偏好（如语速、音调、音量）</li>
+                <li>您设置的常用相册列表（使用系统 Keychain 安全存储）</li>
+                <li>新用户引导完成状态</li>
+            </ul>
+            <p>这些设置数据完全存储在您的设备本地，不会同步到任何云端服务。</p>
+
+            <h2>4. 第三方服务</h2>
+            <p>读图应用不使用任何第三方分析工具、广告服务或数据收集服务。应用完全独立运行，不与任何第三方共享数据。</p>
+
+            <h2>5. 数据安全</h2>
+            <p>由于所有处理都在设备本地完成，您的数据享有 iOS 系统提供的安全保护。我们不传输任何数据，因此不存在数据传输过程中的安全风险。</p>
+
+            <h2>6. 儿童隐私</h2>
+            <p>读图应用适合所有年龄段使用。由于我们不收集任何个人信息，因此不存在儿童隐私相关的问题。</p>
+
+            <h2>7. 隐私政策更新</h2>
+            <p>如果我们对隐私政策进行重大更改，将通过应用更新说明通知您。建议您定期查看本页面以了解最新的隐私保护措施。</p>
+
+            <h2>8. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+            <p>电子邮件：<a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a></p>
         </div>
 
-        <h2>1. 信息收集</h2>
-        <p>读图应用<strong>不收集任何个人信息</strong>。具体而言：</p>
-        <ul>
-            <li><strong>图片数据：</strong>您选择或拍摄的图片仅在设备本地进行处理，不会上传到任何服务器</li>
-            <li><strong>识别结果：</strong>文字识别完全由设备本地的 Apple Vision 框架完成，识别结果不会发送到外部</li>
-            <li><strong>使用数据：</strong>我们不追踪或记录您的使用行为</li>
-            <li><strong>设备信息：</strong>我们不收集设备标识符或其他设备信息</li>
-        </ul>
+        <!-- English Content -->
+        <div class="content-en">
+            <div class="highlight">
+                <p><strong>Core Commitment:</strong> ReadImg runs entirely on your device locally. We do not collect, upload, or store any of your personal data. Your privacy is our top priority.</p>
+            </div>
 
-        <h2>2. 权限使用说明</h2>
-        <p>为了提供核心功能，应用需要以下权限：</p>
-        <ul>
-            <li><strong>相机权限：</strong>用于拍摄图片进行文字识别。拍摄的照片仅用于识别，不会被保存或上传</li>
-            <li><strong>照片库权限：</strong>用于从相册选择图片进行文字识别。我们只读取您选择的图片，不会访问其他照片</li>
-        </ul>
-        <p>您可以随时在系统设置中撤销这些权限。</p>
+            <h2>1. Information Collection</h2>
+            <p>ReadImg <strong>does not collect any personal information</strong>. Specifically:</p>
+            <ul>
+                <li><strong>Image Data:</strong> Images you select or capture are processed locally on your device and are never uploaded to any server</li>
+                <li><strong>Recognition Results:</strong> Text recognition is performed entirely by Apple Vision framework on your device; results are never sent externally</li>
+                <li><strong>Usage Data:</strong> We do not track or record your usage behavior</li>
+                <li><strong>Device Information:</strong> We do not collect device identifiers or other device information</li>
+            </ul>
 
-        <h2>3. 数据存储</h2>
-        <p>读图应用不在设备上存储您的图片或识别结果。每次使用完成后，所有临时数据都会被清除。应用可能保存的仅有：</p>
-        <ul>
-            <li>您的语音设置偏好（如语速、音调、音量）</li>
-            <li>您设置的常用相册列表（使用系统 Keychain 安全存储）</li>
-            <li>新用户引导完成状态</li>
-        </ul>
-        <p>这些设置数据完全存储在您的设备本地，不会同步到任何云端服务。常用相册数据使用 iOS Keychain 安全存储，即使重装应用也不会丢失。</p>
+            <h2>2. Permissions</h2>
+            <p>To provide core functionality, the app requires the following permissions:</p>
+            <ul>
+                <li><strong>Camera Permission:</strong> Used to capture photos for text recognition. Photos are only used for recognition and are not saved or uploaded</li>
+                <li><strong>Photo Library Permission:</strong> Used to select images for text recognition. We only access images you explicitly select</li>
+            </ul>
+            <p>You can revoke these permissions at any time in your device settings.</p>
 
-        <h2>4. 第三方服务</h2>
-        <p>读图应用不使用任何第三方分析工具、广告服务或数据收集服务。应用完全独立运行，不与任何第三方共享数据。</p>
+            <h2>3. Data Storage</h2>
+            <p>ReadImg does not store your images or recognition results on your device. All temporary data is cleared after each use. The app may only save:</p>
+            <ul>
+                <li>Your voice settings preferences (speech rate, pitch, volume)</li>
+                <li>Your favorite albums list (securely stored using system Keychain)</li>
+                <li>Onboarding completion status</li>
+            </ul>
+            <p>This settings data is stored entirely on your device locally and is never synced to any cloud service.</p>
 
-        <h2>5. 数据安全</h2>
-        <p>由于所有处理都在设备本地完成，您的数据享有 iOS 系统提供的安全保护。我们不传输任何数据，因此不存在数据传输过程中的安全风险。</p>
+            <h2>4. Third-Party Services</h2>
+            <p>ReadImg does not use any third-party analytics tools, advertising services, or data collection services. The app operates completely independently and does not share data with any third parties.</p>
 
-        <h2>6. 儿童隐私</h2>
-        <p>读图应用适合所有年龄段使用。由于我们不收集任何个人信息，因此不存在儿童隐私相关的问题。</p>
+            <h2>5. Data Security</h2>
+            <p>Since all processing is done locally on your device, your data is protected by iOS system security. We do not transmit any data, so there are no security risks during data transmission.</p>
 
-        <h2>7. 隐私政策更新</h2>
-        <p>如果我们对隐私政策进行重大更改，将通过应用更新说明通知您。建议您定期查看本页面以了解最新的隐私保护措施。</p>
+            <h2>6. Children's Privacy</h2>
+            <p>ReadImg is suitable for all ages. Since we do not collect any personal information, there are no children's privacy concerns.</p>
 
-        <h2>8. 联系我们</h2>
-        <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
-        <p>电子邮件：<a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a></p>
+            <h2>7. Privacy Policy Updates</h2>
+            <p>If we make significant changes to this privacy policy, we will notify you through app update notes. We recommend checking this page periodically for the latest privacy practices.</p>
+
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this privacy policy, please contact us:</p>
+            <p>Email: <a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a></p>
+        </div>
 
         <div class="footer">
             <p>© 2026 Pinecloud Studio. All rights reserved.</p>
-            <p>本隐私政策适用于「读图」iOS 应用</p>
+            <p class="content-zh">本隐私政策适用于「读图」iOS 应用</p>
+            <p class="content-en">This privacy policy applies to the ReadImg iOS application</p>
         </div>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? '' : 'none');
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+
+        // Auto-detect language from hash, localStorage, or browser
+        (function() {
+            let lang = window.location.hash.replace('#', '') || localStorage.getItem('lang');
+            if (!lang) {
+                lang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+            }
+            switchLang(lang);
+        })();
+    </script>
 </body>
 </html>

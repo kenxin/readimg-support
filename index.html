@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>支持 - 读图</title>
+    <title>Support - ReadImg</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -23,6 +23,9 @@
             padding: 40px;
         }
         .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #f0f0f0; }
+        .lang-switch { position: absolute; top: 20px; right: 20px; }
+        .lang-switch a { color: white; text-decoration: none; padding: 8px 16px; background: rgba(255,255,255,0.2); border-radius: 20px; }
+        .lang-switch a:hover { background: rgba(255,255,255,0.3); }
         .app-icon { width: 100px; height: 100px; border-radius: 22px; background: linear-gradient(135deg, #4285f4 0%, #8a2be2 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
         .app-icon svg { width: 60px; height: 60px; fill: white; }
         h1 { font-size: 32px; color: #1a1a1a; margin-bottom: 10px; }
@@ -46,6 +49,7 @@
         .footer { margin-top: 40px; text-align: center; color: #888; font-size: 14px; }
         .footer a { color: #4285f4; text-decoration: none; }
         .footer a:hover { text-decoration: underline; }
+        .content-zh, .content-en { display: none; }
         @media (max-width: 600px) {
             .container { padding: 25px; }
             h1 { font-size: 26px; }
@@ -54,6 +58,11 @@
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <a href="#zh" onclick="switchLang('zh')">中文</a> |
+        <a href="#en" onclick="switchLang('en')">English</a>
+    </div>
+
     <div class="container">
         <div class="header">
             <div class="app-icon">
@@ -62,94 +71,172 @@
                     <path d="M50 25 L65 40 L65 75 Q65 80 60 80 L40 80 Q35 80 35 75 L35 40 Z" fill="white"/>
                 </svg>
             </div>
-            <h1>读图</h1>
-            <p class="tagline">图片文字识别与语音朗读</p>
+            <h1 class="content-zh">读图</h1>
+            <h1 class="content-en">ReadImg</h1>
+            <p class="tagline content-zh">图片文字识别与语音朗读</p>
+            <p class="tagline content-en">Image OCR & Text-to-Speech</p>
         </div>
 
-        <h2>主要功能</h2>
-        <div class="features">
-            <div class="feature-card">
-                <div class="icon">📷</div>
-                <h3>拍照识别</h3>
-                <p>拍摄或选择图片，自动识别其中的文字内容</p>
+        <!-- Chinese Content -->
+        <div class="content-zh">
+            <h2>主要功能</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">📷</div>
+                    <h3>拍照识别</h3>
+                    <p>拍摄或选择图片，自动识别其中的文字内容</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>精准 OCR</h3>
+                    <p>采用 Apple Vision 框架，中英文识别准确率高</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔊</div>
+                    <h3>语音朗读</h3>
+                    <p>将识别的文字转换为自然流畅的语音</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎛️</div>
+                    <h3>锁屏控制</h3>
+                    <p>锁屏界面直接控制播放，支持耳机按钮操作</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <h3>常用相册</h3>
+                    <p>快速访问常用文件夹，最多收藏10个相册</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>隐私保护</h3>
+                    <p>完全离线处理，您的数据不会上传到任何服务器</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="icon">🔍</div>
-                <h3>精准 OCR</h3>
-                <p>采用 Apple Vision 框架，中英文识别准确率高</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🔊</div>
-                <h3>语音朗读</h3>
-                <p>将识别的文字转换为自然流畅的语音</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🎛️</div>
-                <h3>锁屏控制</h3>
-                <p>锁屏界面直接控制播放，支持耳机按钮操作</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">⭐</div>
-                <h3>常用相册</h3>
-                <p>快速访问常用文件夹，最多收藏10个相册</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🔒</div>
-                <h3>隐私保护</h3>
-                <p>完全离线处理，您的数据不会上传到任何服务器</p>
+
+            <h2>常见问题</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">如何使用读图？</div>
+                    <div class="faq-answer">打开应用后，点击相册按钮选择图片，或点击相机按钮拍摄新照片。应用会自动识别图片中的文字，然后点击播放按钮即可听取语音朗读。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持哪些语言的识别？</div>
+                    <div class="faq-answer">读图支持简体中文、繁体中文和英文的识别，也支持中英文混合的文本识别。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">需要联网使用吗？</div>
+                    <div class="faq-answer">不需要。读图的所有功能都在设备本地完成，无需网络连接即可使用。这也意味着您的隐私得到了最好的保护。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何调节语音设置？</div>
+                    <div class="faq-answer">点击「语音参数」区域可以展开设置面板，您可以自由调节语速、音调和音量，找到最适合您的朗读效果。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">可以后台播放吗？</div>
+                    <div class="faq-answer">可以。读图支持后台播放和锁屏播放，您可以在收听语音的同时使用其他应用，或者锁定屏幕继续收听。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何使用循环播放？</div>
+                    <div class="faq-answer">在语音控制区域，开启「循环播放」开关即可。这个功能非常适合学习和记忆场景，可以反复收听同一段文字。</div>
+                </div>
             </div>
         </div>
 
-        <h2>常见问题</h2>
-        <div class="faq">
-            <div class="faq-item">
-                <div class="faq-question">如何使用读图？</div>
-                <div class="faq-answer">打开应用后，点击相册按钮选择图片，或点击相机按钮拍摄新照片。应用会自动识别图片中的文字，然后点击播放按钮即可听取语音朗读。</div>
+        <!-- English Content -->
+        <div class="content-en">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">📷</div>
+                    <h3>Photo Recognition</h3>
+                    <p>Take or select photos and automatically recognize text content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>Accurate OCR</h3>
+                    <p>Uses Apple Vision framework for high accuracy text recognition</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔊</div>
+                    <h3>Text-to-Speech</h3>
+                    <p>Convert recognized text into natural, fluent speech</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎛️</div>
+                    <h3>Lock Screen Control</h3>
+                    <p>Control playback from lock screen, supports headphone buttons</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <h3>Favorite Albums</h3>
+                    <p>Quick access to frequently used folders, up to 10 favorites</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Fully offline processing, your data never leaves your device</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question">支持哪些语言的识别？</div>
-                <div class="faq-answer">读图支持简体中文、繁体中文和英文的识别，也支持中英文混合的文本识别。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">需要联网使用吗？</div>
-                <div class="faq-answer">不需要。读图的所有功能都在设备本地完成，无需网络连接即可使用。这也意味着您的隐私得到了最好的保护。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">如何调节语音设置？</div>
-                <div class="faq-answer">点击「语音参数」区域可以展开设置面板，您可以自由调节语速、音调和音量，找到最适合您的朗读效果。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">可以后台播放吗？</div>
-                <div class="faq-answer">可以。读图支持后台播放和锁屏播放，您可以在收听语音的同时使用其他应用，或者锁定屏幕继续收听。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">如何使用循环播放？</div>
-                <div class="faq-answer">在语音控制区域，开启「循环播放」开关即可。这个功能非常适合学习和记忆场景，可以反复收听同一段文字。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">如何在锁屏界面控制播放？</div>
-                <div class="faq-answer">开始播放后，锁定屏幕即可在锁屏界面看到播放控制。您可以直接点击播放/暂停按钮，也可以使用前进/后退按钮切换图片。耳机按钮同样支持控制播放。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">如何设置常用相册？</div>
-                <div class="faq-answer">在选择相册时，点击相册右侧的星标按钮即可将其添加为常用相册。常用相册会显示在列表顶部，方便快速访问。最多可设置10个常用相册，长按可快速删除。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">如何快速切换图片？</div>
-                <div class="faq-answer">在目录模式下（选择文件夹后），图片下方会显示「上一张」和「下一张」按钮，点击即可快速切换。锁屏界面同样支持前进/后退按钮切换图片。</div>
+
+            <h2>FAQ</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">How do I use ReadImg?</div>
+                    <div class="faq-answer">Open the app, tap the gallery button to select an image, or tap the camera button to take a new photo. The app will automatically recognize text in the image. Then tap the play button to hear it read aloud.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What languages are supported?</div>
+                    <div class="faq-answer">ReadImg supports Simplified Chinese, Traditional Chinese, and English recognition, as well as mixed Chinese-English text.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does it require internet?</div>
+                    <div class="faq-answer">No. All features work completely offline on your device. This also means your privacy is fully protected.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I adjust voice settings?</div>
+                    <div class="faq-answer">Tap the "Voice Settings" area to expand the settings panel. You can freely adjust speech rate, pitch, and volume to find your preferred reading experience.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can it play in the background?</div>
+                    <div class="faq-answer">Yes. ReadImg supports background and lock screen playback. You can listen while using other apps or with the screen locked.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I use loop playback?</div>
+                    <div class="faq-answer">In the voice control area, turn on the "Loop" switch. This feature is great for learning and memorization, allowing you to repeatedly listen to the same text.</div>
+                </div>
             </div>
         </div>
 
         <div class="contact-section">
-            <h2>需要帮助？</h2>
-            <p>如果您有任何问题、建议或反馈，欢迎随时联系我们</p>
+            <h2 class="content-zh">需要帮助？</h2>
+            <h2 class="content-en">Need Help?</h2>
+            <p class="content-zh">如果您有任何问题、建议或反馈，欢迎随时联系我们</p>
+            <p class="content-en">If you have any questions, suggestions, or feedback, feel free to contact us</p>
             <a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a>
         </div>
 
         <div class="footer">
             <p>© 2026 Pinecloud Studio. All rights reserved.</p>
-            <p><a href="privacy-policy.html">隐私政策</a></p>
+            <p><a href="privacy-policy.html" class="content-zh">隐私政策</a><a href="privacy-policy.html" class="content-en">Privacy Policy</a></p>
         </div>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? '' : 'none');
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+
+        // Auto-detect language from hash, localStorage, or browser
+        (function() {
+            let lang = window.location.hash.replace('#', '') || localStorage.getItem('lang');
+            if (!lang) {
+                lang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+            }
+            switchLang(lang);
+        })();
+    </script>
 </body>
 </html>
