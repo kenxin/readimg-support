@@ -23,7 +23,7 @@
         .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #f0f0f0; text-align: center; color: #888; font-size: 14px; }
         .contact-email { color: #4285f4; text-decoration: none; }
         .contact-email:hover { text-decoration: underline; }
-        .content-zh, .content-en { display: none; }
+        .content-en { display: none; }
         @media (max-width: 600px) { .container { padding: 25px; } h1 { font-size: 24px; } h2 { font-size: 18px; } }
     </style>
 </head>
@@ -148,8 +148,8 @@
 
     <script>
         function switchLang(lang) {
-            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? '' : 'none');
-            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? 'block' : 'none');
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
             document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
             localStorage.setItem('lang', lang);
         }

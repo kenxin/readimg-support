@@ -49,7 +49,7 @@
         .footer { margin-top: 40px; text-align: center; color: #888; font-size: 14px; }
         .footer a { color: #4285f4; text-decoration: none; }
         .footer a:hover { text-decoration: underline; }
-        .content-zh, .content-en { display: none; }
+        .content-en { display: none; }
         @media (max-width: 600px) {
             .container { padding: 25px; }
             h1 { font-size: 26px; }
@@ -223,8 +223,8 @@
 
     <script>
         function switchLang(lang) {
-            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? '' : 'none');
-            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? 'block' : 'none');
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
             document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
             localStorage.setItem('lang', lang);
         }
