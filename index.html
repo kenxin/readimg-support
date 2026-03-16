@@ -49,6 +49,8 @@
         .footer { margin-top: 40px; text-align: center; color: #888; font-size: 14px; }
         .footer a { color: #4285f4; text-decoration: none; }
         .footer a:hover { text-decoration: underline; }
+        .content-zh-hans { display: block; }
+        .content-zh-hant { display: none; }
         .content-en { display: none; }
         @media (max-width: 600px) {
             .container { padding: 25px; }
@@ -59,7 +61,8 @@
 </head>
 <body>
     <div class="lang-switch">
-        <a href="#zh" onclick="switchLang('zh')">中文</a> |
+        <a href="#zh-hans" onclick="switchLang('zh-hans')">简体中文</a> |
+        <a href="#zh-hant" onclick="switchLang('zh-hant')">繁體中文</a> |
         <a href="#en" onclick="switchLang('en')">English</a>
     </div>
 
@@ -68,14 +71,16 @@
             <div class="app-icon">
                 <img src="app-icon.png" alt="ReadImg" style="width: 100%; height: 100%; border-radius: 22px;">
             </div>
-            <h1 class="content-zh">读图</h1>
+            <h1 class="content-zh-hans">读图</h1>
+            <h1 class="content-zh-hant">讀圖</h1>
             <h1 class="content-en">ReadImg</h1>
-            <p class="tagline content-zh">图片文字识别与语音朗读</p>
+            <p class="tagline content-zh-hans">图片文字识别与语音朗读</p>
+            <p class="tagline content-zh-hant">圖片文字識別與語音朗讀</p>
             <p class="tagline content-en">Image OCR & Text-to-Speech</p>
         </div>
 
-        <!-- Chinese Content -->
-        <div class="content-zh">
+        <!-- Simplified Chinese Content -->
+        <div class="content-zh-hans">
             <h2>主要功能</h2>
             <div class="features">
                 <div class="feature-card">
@@ -107,6 +112,11 @@
                     <div class="icon">⏸️</div>
                     <h3>暂停恢复</h3>
                     <p>随时暂停朗读，恢复后从暂停位置继续</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🖼️</div>
+                    <h3>图片放大</h3>
+                    <p>点击图片可全屏查看，支持缩放拖动，切换图片自动更新</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">🔒</div>
@@ -144,6 +154,93 @@
                 <div class="faq-item">
                     <div class="faq-question">如何暂停和恢复朗读？</div>
                     <div class="faq-answer">在朗读过程中，点击暂停按钮即可暂停。应用会记住当前朗读的位置，再次点击继续按钮，将从暂停的位置继续朗读，无需重新开始。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何放大查看图片？</div>
+                    <div class="faq-answer">点击主页面的图片缩略图即可全屏查看。在全屏模式下，您可以双指缩放图片（0.5x - 4x），拖动查看细节。切换到下一张图片时，全屏视图会自动更新。点击图片外的暗色区域或右上角的关闭按钮即可退出全屏。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traditional Chinese Content -->
+        <div class="content-zh-hant">
+            <h2>主要功能</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">📷</div>
+                    <h3>拍照識別</h3>
+                    <p>拍攝或選擇圖片，自動識別其中的文字內容</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>精準 OCR</h3>
+                    <p>設備本地離線識別，中英文準確率高</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔊</div>
+                    <h3>語音朗讀</h3>
+                    <p>將識別的文字轉換為自然流暢的語音</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎛️</div>
+                    <h3>鎖屏控制</h3>
+                    <p>鎖屏界面直接控制播放，支持耳機按鈕操作</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <h3>常用相簿</h3>
+                    <p>快速訪問常用文件夾，最多收藏10個相簿</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⏸️</div>
+                    <h3>暫停恢復</h3>
+                    <p>隨時暫停朗讀，恢復後從暫停位置繼續</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🖼️</div>
+                    <h3>圖片放大</h3>
+                    <p>點擊圖片可全屏查看，支持縮放拖動，切換圖片自動更新</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>隱私保護</h3>
+                    <p>完全離線處理，您的數據不會上傳到任何服務器</p>
+                </div>
+            </div>
+
+            <h2>常見問題</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">如何使用讀圖？</div>
+                    <div class="faq-answer">打開應用後，點擊相簿按鈕選擇圖片，或點擊相機按鈕拍攝新照片。應用會自動識別圖片中的文字，然後點擊播放按鈕即可聽取語音朗讀。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持哪些語言的識別？</div>
+                    <div class="faq-answer">讀圖支持簡體中文、繁體中文和英文的識別，也支持中英文混合的文本識別。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">需要聯網使用嗎？</div>
+                    <div class="faq-answer">不需要。讀圖的所有功能都在設備本地完成，無需網絡連接即可使用。這也意味著您的隱私得到了最好的保護。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何調節語音設置？</div>
+                    <div class="faq-answer">點擊「語音參數」區域可以展開設置面板，您可以自由調節語速、音調和音量，找到最適合您的朗讀效果。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">可以後台播放嗎？</div>
+                    <div class="faq-answer">可以。讀圖支持後台播放和鎖屏播放，您可以在收聽語音的同時使用其他應用，或者鎖定屏幕繼續收聽。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何使用循環播放？</div>
+                    <div class="faq-answer">在語音控制區域，開啟「循環播放」開關即可。這個功能非常適合學習和記憶場景，可以反復收聽同一段文字。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何暫停和恢復朗讀？</div>
+                    <div class="faq-answer">在朗讀過程中，點擊暫停按鈕即可暫停。應用會記住當前朗讀的位置，再次點擊繼續按鈕，將從暫停的位置繼續朗讀，無需重新開始。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何放大查看圖片？</div>
+                    <div class="faq-answer">點擊主頁面的圖片縮略圖即可全屏查看。在全屏模式下，您可以雙指縮放圖片（0.5x - 4x），拖動查看細節。切換到下一張圖片時，全屏視圖會自動更新。點擊圖片外的暗色區域或右上角的關閉按鈕即可退出全屏。</div>
                 </div>
             </div>
         </div>
@@ -183,6 +280,11 @@
                     <p>Pause anytime and resume from where you left off</p>
                 </div>
                 <div class="feature-card">
+                    <div class="icon">🖼️</div>
+                    <h3>Image Zoom</h3>
+                    <p>Tap to view fullscreen, supports pinch-to-zoom and auto-updates when switching</p>
+                </div>
+                <div class="feature-card">
                     <div class="icon">🔒</div>
                     <h3>Privacy First</h3>
                     <p>Fully offline processing, your data never leaves your device</p>
@@ -219,28 +321,52 @@
                     <div class="faq-question">How do I pause and resume?</div>
                     <div class="faq-answer">During playback, tap the pause button to pause. The app remembers your position, and when you tap resume, it continues from where you paused without starting over.</div>
                 </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I zoom in on images?</div>
+                    <div class="faq-answer">Tap the image thumbnail on the main page to view it fullscreen. In fullscreen mode, you can pinch to zoom (0.5x - 4x) and drag to view details. When you switch to the next image, the fullscreen view updates automatically. Tap the dark area outside the image or the close button in the top right to exit fullscreen.</div>
+                </div>
             </div>
         </div>
 
         <div class="contact-section">
-            <h2 class="content-zh">需要帮助？</h2>
+            <h2 class="content-zh-hans">需要帮助？</h2>
+            <h2 class="content-zh-hant">需要幫助？</h2>
             <h2 class="content-en">Need Help?</h2>
-            <p class="content-zh">如果您有任何问题、建议或反馈，欢迎随时联系我们</p>
+            <p class="content-zh-hans">如果您有任何问题、建议或反馈，欢迎随时联系我们</p>
+            <p class="content-zh-hant">如果您有任何問題、建議或反饋，歡迎隨時聯繫我們</p>
             <p class="content-en">If you have any questions, suggestions, or feedback, feel free to contact us</p>
             <a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a>
         </div>
 
         <div class="footer">
             <p>© 2026 Pinecloud Studio. All rights reserved.</p>
-            <p><a href="privacy-policy.html" class="content-zh">隐私政策</a><a href="privacy-policy.html" class="content-en">Privacy Policy</a></p>
+            <p><a href="privacy-policy.html" class="content-zh-hans">隐私政策</a><a href="privacy-policy.html" class="content-zh-hant">隱私政策</a><a href="privacy-policy.html" class="content-en">Privacy Policy</a></p>
         </div>
     </div>
 
     <script>
         function switchLang(lang) {
-            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? 'block' : 'none');
-            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            // Normalize language codes
+            if (lang === 'zh') lang = 'zh-hans';
+            if (lang === 'tw') lang = 'zh-hant';
+
+            // Hide all language content
+            document.querySelectorAll('.content-zh-hans').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.content-zh-hant').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = 'none');
+
+            // Show selected language
+            if (lang === 'zh-hans') {
+                document.querySelectorAll('.content-zh-hans').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'zh-Hans';
+            } else if (lang === 'zh-hant') {
+                document.querySelectorAll('.content-zh-hant').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'zh-Hant';
+            } else {
+                document.querySelectorAll('.content-en').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'en';
+            }
+
             localStorage.setItem('lang', lang);
         }
 
@@ -248,7 +374,14 @@
         (function() {
             let lang = window.location.hash.replace('#', '') || localStorage.getItem('lang');
             if (!lang) {
-                lang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+                const browserLang = navigator.language.toLowerCase();
+                if (browserLang.startsWith('zh-hant') || browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk')) {
+                    lang = 'zh-hant';
+                } else if (browserLang.startsWith('zh')) {
+                    lang = 'zh-hans';
+                } else {
+                    lang = 'en';
+                }
             }
             switchLang(lang);
         })();

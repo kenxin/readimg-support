@@ -23,26 +23,31 @@
         .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #f0f0f0; text-align: center; color: #888; font-size: 14px; }
         .contact-email { color: #4285f4; text-decoration: none; }
         .contact-email:hover { text-decoration: underline; }
+        .content-zh-hans { display: block; }
+        .content-zh-hant { display: none; }
         .content-en { display: none; }
         @media (max-width: 600px) { .container { padding: 25px; } h1 { font-size: 24px; } h2 { font-size: 18px; } }
     </style>
 </head>
 <body>
     <div class="lang-switch">
-        <a href="#zh" onclick="switchLang('zh')">中文</a> |
+        <a href="#zh-hans" onclick="switchLang('zh-hans')">简体中文</a> |
+        <a href="#zh-hant" onclick="switchLang('zh-hant')">繁體中文</a> |
         <a href="#en" onclick="switchLang('en')">English</a>
     </div>
 
     <div class="container">
         <div class="header">
-            <h1 class="content-zh">读图 - 隐私政策</h1>
+            <h1 class="content-zh-hans">读图 - 隐私政策</h1>
+            <h1 class="content-zh-hant">讀圖 - 隱私政策</h1>
             <h1 class="content-en">ReadImg - Privacy Policy</h1>
-            <p class="update-date content-zh">最后更新日期：2026年2月</p>
+            <p class="update-date content-zh-hans">最后更新日期：2026年2月</p>
+            <p class="update-date content-zh-hant">最後更新日期：2026年2月</p>
             <p class="update-date content-en">Last Updated: February 2026</p>
         </div>
 
-        <!-- Chinese Content -->
-        <div class="content-zh">
+        <!-- Simplified Chinese Content -->
+        <div class="content-zh-hans">
             <div class="highlight">
                 <p><strong>核心承诺：</strong>读图应用完全在您的设备本地运行，不收集、不上传、不存储您的任何个人数据。您的隐私安全是我们的首要考虑。</p>
             </div>
@@ -88,6 +93,55 @@
             <h2>8. 联系我们</h2>
             <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
             <p>电子邮件：<a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a></p>
+        </div>
+
+        <!-- Traditional Chinese Content -->
+        <div class="content-zh-hant">
+            <div class="highlight">
+                <p><strong>核心承諾：</strong>讀圖應用完全在您的設備本地運行，不收集、不上傳、不存儲您的任何個人數據。您的隱私安全是我們的首要考慮。</p>
+            </div>
+
+            <h2>1. 信息收集</h2>
+            <p>讀圖應用<strong>不收集任何個人信息</strong>。具體而言：</p>
+            <ul>
+                <li><strong>圖片數據：</strong>您選擇或拍攝的圖片僅在設備本地進行處理，不會上傳到任何服務器</li>
+                <li><strong>識別結果：</strong>文字識別完全在設備本地完成，識別結果不會發送到外部</li>
+                <li><strong>使用數據：</strong>我們不追蹤或記錄您的使用行為</li>
+                <li><strong>設備信息：</strong>我們不收集設備標識符或其他設備信息</li>
+            </ul>
+
+            <h2>2. 權限使用說明</h2>
+            <p>為了提供核心功能，應用需要以下權限：</p>
+            <ul>
+                <li><strong>相機權限：</strong>用於拍攝圖片進行文字識別。拍攝的照片僅用於識別，不會被保存或上傳</li>
+                <li><strong>照片庫權限：</strong>用於從相簿選擇圖片進行文字識別。我們只讀取您選擇的圖片，不會訪問其他照片</li>
+            </ul>
+            <p>您可以隨時在系統設置中撤銷這些權限。</p>
+
+            <h2>3. 數據存儲</h2>
+            <p>讀圖應用不在設備上存儲您的圖片或識別結果。每次使用完成後，所有臨時數據都會被清除。應用可能保存的僅有：</p>
+            <ul>
+                <li>您的語音設置偏好（如語速、音調、音量）</li>
+                <li>您設置的常用相簿列表（使用系統 Keychain 安全存儲）</li>
+                <li>新用戶引導完成狀態</li>
+            </ul>
+            <p>這些設置數據完全存儲在您的設備本地，不會同步到任何雲端服務。</p>
+
+            <h2>4. 第三方服務</h2>
+            <p>讀圖應用不使用任何第三方分析工具、廣告服務或數據收集服務。應用完全獨立運行，不與任何第三方共享數據。</p>
+
+            <h2>5. 數據安全</h2>
+            <p>由於所有處理都在設備本地完成，您的數據享有 iOS 系統提供的安全保護。我們不傳輸任何數據，因此不存在數據傳輸過程中的安全風險。</p>
+
+            <h2>6. 兒童隱私</h2>
+            <p>讀圖應用適合所有年齡段使用。由於我們不收集任何個人信息，因此不存在兒童隱私相關的問題。</p>
+
+            <h2>7. 隱私政策更新</h2>
+            <p>如果我們對隱私政策進行重大更改，將通過應用更新說明通知您。建議您定期查看本頁面以了解最新的隱私保護措施。</p>
+
+            <h2>8. 聯繫我們</h2>
+            <p>如果您對本隱私政策有任何疑問，請通過以下方式聯繫我們：</p>
+            <p>電子郵件：<a href="mailto:pinecloud.ju@gmail.com" class="contact-email">pinecloud.ju@gmail.com</a></p>
         </div>
 
         <!-- English Content -->
@@ -141,16 +195,35 @@
 
         <div class="footer">
             <p>© 2026 Pinecloud Studio. All rights reserved.</p>
-            <p class="content-zh">本隐私政策适用于「读图」iOS 应用</p>
+            <p class="content-zh-hans">本隐私政策适用于「读图」iOS 应用</p>
+            <p class="content-zh-hant">本隱私政策適用於「讀圖」iOS 應用</p>
             <p class="content-en">This privacy policy applies to the ReadImg iOS application</p>
         </div>
     </div>
 
     <script>
         function switchLang(lang) {
-            document.querySelectorAll('.content-zh').forEach(el => el.style.display = lang === 'zh' ? 'block' : 'none');
-            document.querySelectorAll('.content-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            // Normalize language codes
+            if (lang === 'zh') lang = 'zh-hans';
+            if (lang === 'tw') lang = 'zh-hant';
+
+            // Hide all language content
+            document.querySelectorAll('.content-zh-hans').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.content-zh-hant').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = 'none');
+
+            // Show selected language
+            if (lang === 'zh-hans') {
+                document.querySelectorAll('.content-zh-hans').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'zh-Hans';
+            } else if (lang === 'zh-hant') {
+                document.querySelectorAll('.content-zh-hant').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'zh-Hant';
+            } else {
+                document.querySelectorAll('.content-en').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'en';
+            }
+
             localStorage.setItem('lang', lang);
         }
 
@@ -158,7 +231,14 @@
         (function() {
             let lang = window.location.hash.replace('#', '') || localStorage.getItem('lang');
             if (!lang) {
-                lang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+                const browserLang = navigator.language.toLowerCase();
+                if (browserLang.startsWith('zh-hant') || browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk')) {
+                    lang = 'zh-hant';
+                } else if (browserLang.startsWith('zh')) {
+                    lang = 'zh-hans';
+                } else {
+                    lang = 'en';
+                }
             }
             switchLang(lang);
         })();
